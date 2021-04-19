@@ -19,7 +19,7 @@ public class Base {
 	cap.setCapability("udid", "RZ8N81Y36WD");
 	cap.setCapability("platformName", "Android");
 	cap.setCapability("platformVersion", "11");
-	cap.setCapability("appPackage", "in.amazon.mShop.android.shopping");
+	cap.setCapability("appPackage", "com.amazon.mShop.android.shopping");
 	cap.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
 	
 	URL url = new URL("http://127.0.0.1:4723/wd/hub");
