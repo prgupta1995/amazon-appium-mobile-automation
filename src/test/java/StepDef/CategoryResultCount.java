@@ -33,10 +33,10 @@ public class CategoryResultCount extends Base{
 			categoryCount.hamburgerMenu().click();
 			categoryCount.settingsTab().click();
 			categoryCount.selectCountryLang().click();
-			categoryCount.selectCountrydrpdwn().click();
+			categoryCount.selectCountryRegiondrpdwn().click();
 			categoryCount.selectCountryUS().click();
 			categoryCount.countryDoneBtn().click();
-
+			
 			categoryCount.hamburgerMenu().click();
 			categoryCount.shopByDepartment().click();
 		} catch (Exception e) {
@@ -56,7 +56,6 @@ public class CategoryResultCount extends Base{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-    	
     }
 
     @Then("^Check the total number of results match the total displayed in filter$")

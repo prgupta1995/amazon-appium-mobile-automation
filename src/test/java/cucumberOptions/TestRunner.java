@@ -11,7 +11,7 @@ glue = {"StepDef"},
 plugin = {"pretty","html:target/cucumber-reports","json:target/cucumber.json","junit:target/cucumber.xml"},
 monochrome=true,
 strict=true,
-tags = {"@categoryResultCount"}
+tags = {"@productPriceCurrency"}
 )
 
 public class TestRunner{

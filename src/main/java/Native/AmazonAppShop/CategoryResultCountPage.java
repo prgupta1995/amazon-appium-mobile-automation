@@ -21,7 +21,7 @@ public class CategoryResultCountPage {
 	private AndroidElement selectCountryLang;
 	
 	@AndroidFindBy(className = "android.widget.Button")
-	private List<AndroidElement> selectCountrydrpdwn;
+	private List<AndroidElement> selectCountryRegiondrpdwn;
 
 	@AndroidFindBy(xpath = "//android.widget.RadioButton[@text='United States Amazon.com']")
 	private AndroidElement selectCountryUS;
@@ -58,15 +58,6 @@ public class CategoryResultCountPage {
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[starts-with(@text, 'Show ')]")
 	private AndroidElement showResults;
-	
-	@AndroidFindBy(className = "android.widget.Image") //android.widget.Image
-	private List<AndroidElement> resultList;
-	
-	@AndroidFindBy(xpath = "//android.view.View[starts-with(@content-desc, 'Next']")
-	private AndroidElement nextBtn;
-	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Next'][@clickable='false']")
-	private AndroidElement nextBtnDisable;
 	
 	
 	
@@ -106,8 +97,8 @@ public class CategoryResultCountPage {
 		return selectCountryLang;
 	}
 	
-	public AndroidElement selectCountrydrpdwn() {
-		return selectCountrydrpdwn.get(0);
+	public AndroidElement selectCountryRegiondrpdwn() {
+		return selectCountryRegiondrpdwn.get(0);
 	}
 	
 	public AndroidElement selectCountryUS() {
@@ -136,18 +127,6 @@ public class CategoryResultCountPage {
 	
 	public AndroidElement showResults() {
 		return showResults;
-	}
-	
-	public List<AndroidElement> resultList() {
-		return resultList;
-	}
-	
-	public AndroidElement nextBtn() {
-		return nextBtn;
-	}
-	
-	public AndroidElement nextBtnDisable() {
-		return nextBtnDisable;
 	}
 	
 	
