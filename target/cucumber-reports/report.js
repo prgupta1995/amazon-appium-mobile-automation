@@ -1,83 +1,53 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Scenarios.feature");
 formatter.feature({
   "line": 1,
-  "name": "Automate all the given scenarios in the amazon app",
+  "name": "Automate category result count, product price currency and Product details in the amazon app",
   "description": "",
-  "id": "automate-all-the-given-scenarios-in-the-amazon-app",
+  "id": "automate-category-result-count,-product-price-currency-and-product-details-in-the-amazon-app",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 5,
+  "line": 21,
   "name": "",
-  "description": "Check the total displayed number of results for category Smart Home Televisions",
-  "id": "automate-all-the-given-scenarios-in-the-amazon-app;",
+  "description": "Check Product Detail Page image swipe, Payments Option, Pricing, Stock, Add to Cart",
+  "id": "automate-category-result-count,-product-price-currency-and-product-details-in-the-amazon-app;",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 4,
-      "name": "@categoryResultCount"
+      "line": 20,
+      "name": "@productDetails"
     }
   ]
 });
 formatter.step({
-  "line": 7,
-  "name": "Click on Shop by Department from burger menu",
+  "line": 23,
+  "name": "Tap on the Search bar and search for \"Apple\", Tap the picture of the product and swipe Left to Right",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
-  "name": "Choose category Electronics",
+  "line": 24,
+  "name": "The price of the product is displayed, Verify payment options are displayed",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "Choose subcategory category TV \u0026 VIDEO",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "Filter with Smart TV and click show results",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check the total number of results match the total displayed in filter",
+  "line": 25,
+  "name": "Verify out of stock or in stock, information is showing on the page, Tap and verify add to cart feature",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CategoryResultCount.click_on_shop_by_department_from_burger_menu()"
+  "arguments": [
+    {
+      "val": "Apple",
+      "offset": 38
+    }
+  ],
+  "location": "ProductDetail.tap_on_the_search_bar_and_search_for_something_tap_the_picture_of_the_product_and_swipe_left_to_right(String)"
 });
 formatter.result({
-  "duration": 23897866218,
+  "duration": 60658176767,
   "status": "passed"
 });
 formatter.match({
-  "location": "CategoryResultCount.choose_category_electronics()"
-});
-formatter.result({
-  "duration": 29970,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CategoryResultCount.choose_subcategory_category_tv_video()"
-});
-formatter.result({
-  "duration": 39285,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CategoryResultCount.filter_with_smart_tv_and_click_show_results()"
-});
-formatter.result({
-  "duration": 23139,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CategoryResultCount.check_the_total_number_of_results_match_the_total_displayed_in_filter()"
-});
-formatter.result({
-  "duration": 43389,
-  "status": "passed"
-});
+  "location": "ProductDetail.the_price_of_the_product_is_displayed_verify_payment_options_are_displayed()"
 });

@@ -62,19 +62,27 @@ public class ProductPriceCurrency extends Base {
 
 	@Then("^Assert on selected currency displayed for Deals and Promotions products$")
 	public void assert_on_selected_currency_displayed_for_deals_and_promotions_products() throws Throwable {
-		categoryCount.hamburgerMenu().click();
-		categoryCount.shopByDepartment().click();
+		try {
+			categoryCount.hamburgerMenu().click();
+			categoryCount.shopByDepartment().click();
 
-		// Scroll till the Element
-		MobileElement scrollToDeals = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
-				"new UiScrollable(new UiSelector()).scrollIntoView(" + "new UiSelector().text(\"Deals\"));"));
+			// Scroll till the Element
+			AndroidElement scrollToDeals = (AndroidElement) driver.findElement(MobileBy.AndroidUIAutomator(
+					"new UiScrollable(new UiSelector()).scrollIntoView(" + "new UiSelector().text(\"Deals\"));"));
 
-		scrollToDeals.click();
-
-		System.out.println(productCurrency.tapDealsAndPromotionDollar().getText());
-		Assert.assertTrue("Selected Currency AED is not displayed on Deals and Promotion page.", productCurrency.tapDealsAndPromotionDollar().isDisplayed());
-		productCurrency.tapDealsAndPromotionDollar().click();
-		Assert.assertTrue("Selected Currency is displayed as AED inside the PLP listing page. ",productCurrency.tapDealsAndPromotionAED().isDisplayed() );
+			scrollToDeals.click();
+			String getCurrencyDollar  = productCurrency.tapDealsAndPromotionDollar().getText();
+			System.out.println(productCurrency.tapDealsAndPromotionDollar().getText());
+			Assert.assertTrue("Selected Currency AED is not displayed on Deals and Promotion page.", getCurrencyDollar.contains("$"));
+			productCurrency.tapDealsAndPromotionDollar().click();
+			
+			String getCurrencyAED = productCurrency.tapDealsAndPromotionAED().getText();
+			
+			Assert.assertTrue("Selected Currency is displayed as AED inside the PLP listing page.",getCurrencyAED.contains("AED"));
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		
 	}
